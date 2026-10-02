@@ -1,9 +1,8 @@
 import { TareasService } from "./tareas.service";
 
 const servicio = new TareasService();
-servicio.crear("Aprender TypeScript");
-servicio.crear("Aprender Nest.js");
-servicio.completar(1);
-servicio.eliminar(2);
+servicio.crear("A");
+servicio.crear("B");
+servicio.eliminar(1);
+servicio.crear("C");
 console.log(servicio.listar());
-console.log(servicio.filtrarPorEstado(true));
