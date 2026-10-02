@@ -6,3 +6,4 @@ servicio.crear("Aprender Nest.js");
 servicio.completar(1);
 servicio.eliminar(2);
 console.log(servicio.listar());
+console.log(servicio.filtrarPorEstado(true));

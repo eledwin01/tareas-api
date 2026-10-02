@@ -32,4 +32,7 @@ export class TareasService {
     }
     this.tareas.splice(indice, 1);
   }
+    filtrarPorEstado(completada: boolean): Tarea[] {
+    return this.tareas.filter((t) => t.completada === completada);
+  }
 }
