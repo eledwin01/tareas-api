@@ -25,4 +25,11 @@ export class TareasService {
     tarea.completada = true;
     return tarea;
   }
+    eliminar(id: number): void {
+    const indice = this.tareas.findIndex((t) => t.id === id);
+    if (indice === -1) {
+      throw new Error(`Tarea con id ${id} no existe`);
+    }
+    this.tareas.splice(indice, 1);
+  }
 }
