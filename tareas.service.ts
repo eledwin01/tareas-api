@@ -16,4 +16,13 @@ export class TareasService {
   listar(): Tarea[] {
     return this.tareas;
   }
+
+  completar(id: number): Tarea {
+    const tarea = this.tareas.find((t) => t.id === id);
+    if (!tarea) {
+      throw new Error(`Tarea con id ${id} no existe`);
+    }
+    tarea.completada = true;
+    return tarea;
+  }
 }
